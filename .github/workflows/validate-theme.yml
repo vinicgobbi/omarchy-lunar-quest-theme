@@ -26,3 +26,30 @@ jobs:
 
       - name: Validate theme package
         run: bash tests/validate-theme.sh
+
+  # Once main validates, Commitizen reads the conventional commits since the
+  # last tag: feat bumps minor, fix bumps patch, a breaking change bumps major.
+  # It commits the new version and changelog section, tags it and pushes.
+  # Commits that bump nothing (docs, ci, chore...) end the job quietly.
+  bump:
+    name: Bump version
+    needs: validate
+    if: >-
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/main' &&
+      !startsWith(github.event.head_commit.message, 'bump:')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Bump version and changelog
+        uses: commitizen-tools/commitizen-action@338bbd841b75aaee6bf5340e1fa12f6ab58ff9ff # 0.27.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commitizen_version: 4.19.1
