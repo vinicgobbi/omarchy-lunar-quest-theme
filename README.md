@@ -95,6 +95,23 @@ it on every push.
 bash tests/validate-theme.sh
 ```
 
+## Releases
+
+Versions are bumped automatically by [Commitizen](https://commitizen-tools.github.io/commitizen/)
+from [Conventional Commits](https://www.conventionalcommits.org/). After a
+push to `main` passes validation, CI bumps the version in `.cz.toml`, adds a
+section to [CHANGELOG.md](CHANGELOG.md), tags `vX.Y.Z` and pushes:
+
+| Commit | Bump |
+|---|---|
+| `fix: ...` | patch |
+| `feat: ...` | minor |
+| `feat!: ...` or a `BREAKING CHANGE:` footer | major |
+| `docs:`, `ci:`, `chore:`, `refactor:`... | none |
+
+Write commits locally with `cz commit`, or preview the next bump with
+`cz bump --dry-run`.
+
 ## License
 
 MIT, see [LICENSE](LICENSE). The NASA photographs and the Omarchy wordmark are
