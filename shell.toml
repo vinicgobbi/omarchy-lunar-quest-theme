@@ -1,0 +1,119 @@
+# Lunar Quest: deep-space surfaces lit by Earth-blue focus and regolith text.
+# Uses Omarchy shell surface tokens; unspecified settings use shell defaults.
+
+[bar]
+background = "#0a111d"
+background-alpha = 0.92
+text = "#d3d1cf"
+active = "#d9777a"
+
+[hyprland]
+active-border = "rgba(7ea3cfee) rgba(c3c0c0ee) 45deg"
+active-border-foreground = "rgba(7ea3cfee) rgba(c3c0c0ee) 45deg"
+
+[controls]
+normal-color = "#d3d1cf"
+normal-fill-alpha = 0.04
+normal-border = "#8f8c8d"
+normal-border-width = 1
+normal-border-alpha = 0.35
+hover-cursor-color = "#a7beda"
+hover-cursor-fill-alpha = 0.08
+hover-cursor-border = "#7ea3cf"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.5
+focus-color = "#a7beda"
+focus-fill-alpha = 0.10
+focus-border = "#7ea3cf"
+focus-border-width = 1
+focus-border-alpha = 0.9
+selected-color = "#e8f0f8"
+selected-fill-alpha = 0.18
+selected-border = "#7ea3cf"
+selected-border-width = 0
+selected-border-alpha = 1.0
+
+[popups]
+background = "#0a111d"
+background-alpha = 0.96
+text = "#d3d1cf"
+border = "hyprland.active-border"
+border-alpha = 1.0
+
+[tooltip]
+background = "#152033"
+background-alpha = 0.97
+text = "#e8f0f8"
+border = "#223855"
+border-alpha = 1.0
+
+[notifications]
+background = "#0a111d"
+background-alpha = 0.96
+text = "#d3d1cf"
+border = "hyprland.active-border"
+border-alpha = 1.0
+countdown = "#7ea3cf"
+
+[launcher]
+background = "#0a111d"
+background-alpha = 0.94
+text = "#d3d1cf"
+border = "hyprland.active-border"
+border-alpha = 1.0
+scrim = "#04070e"
+scrim-alpha = 0.55
+selected-background = "#223855"
+selected-background-alpha = 0.85
+selected-text = "#e8f0f8"
+selected-border = "#7ea3cf"
+selected-border-alpha = 0.6
+
+[menu]
+background = "#0a111d"
+background-alpha = 0.96
+text = "#d3d1cf"
+border = "hyprland.active-border"
+border-alpha = 1.0
+scrim = "#04070e"
+scrim-alpha = 0.55
+selected-background = "#223855"
+selected-background-alpha = 0.85
+selected-text = "#e8f0f8"
+selected-border = "#7ea3cf"
+selected-border-alpha = 0.6
+
+[polkit]
+background = "#0a111d"
+background-alpha = 0.97
+text = "#d3d1cf"
+text-error = "#d9777a"
+border = "hyprland.active-border"
+border-error = "#d9777a"
+border-alpha = 1.0
+scrim = "#04070e"
+scrim-alpha = 0.6
+accent = "#7ea3cf"
+
+# Idle border is regolith grey; typing lights it up Earth blue.
+[lock]
+background = "#04070e"
+background-alpha = 0.8
+text = "#e8f0f8"
+placeholder = "#8f8c8d"
+text-error = "#d9777a"
+border = "#c3c0c0"
+border-active = "#7ea3cf"
+border-error = "#d9777a"
+border-alpha = 0.7
+selection = "#7ea3cf"
+selection-alpha = 0.45
+
+[image-picker]
+scrim = "#04070e"
+scrim-alpha = 0.6
+text = "#d3d1cf"
+selected-border = "#7ea3cf"
+selected-border-alpha = 1.0
+unselected-border = "#8f8c8d"
+unselected-border-alpha = 0.28
