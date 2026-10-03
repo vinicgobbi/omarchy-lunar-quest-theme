@@ -29,7 +29,9 @@ monochrome lunar surface.
   selection.
 - **Windows** (`hyprland.lua`): borders fade from Earth blue to lunar
   highlight, and the focused window carries a soft blue glow, like
-  earthshine on the Moon's night side.
+  earthshine on the Moon's night side. Corners are rounded to 8px; the
+  Omarchy shell follows, so menus, popups and controls round to match. A
+  `decoration.rounding` set in `~/.config/hypr/looknfeel.lua` still wins.
 - **btop** (`btop.theme`): CPU graphs rise from Earth's night side to its
   cloud tops, memory meters use regolith greys, and temperature and usage
   warm from Earth blue through sunlight to red.

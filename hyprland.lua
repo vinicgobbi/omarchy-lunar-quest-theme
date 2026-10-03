@@ -23,6 +23,10 @@ hl.config({
   },
 
   decoration = {
+    -- Soft corners, like worn crater rims. The Omarchy shell mirrors this
+    -- value, so menus, popups and controls round to match.
+    rounding = 8,
+
     shadow = {
       enabled = true,
       range = 14,
