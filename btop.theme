@@ -1,0 +1,95 @@
+# Lunar Quest for btop: Earth-blue activity over a deep-space background,
+# regolith greys for memory, and sunlight warming toward red under load.
+
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]="#0a111d"
+
+# Main text color
+theme[main_fg]="#d3d1cf"
+
+# Title color for boxes
+theme[title]="#d3d1cf"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#7ea3cf"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#223855"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#7ea3cf"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#757478"
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#b9b6b5"
+
+# Background color of the percentage meters
+theme[meter_bg]="#223855"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#b9b6b5"
+# CPU, Memory, Network, Proc box outline colors
+theme[cpu_box]="#7ea3cf"
+theme[mem_box]="#b9b6b5"
+theme[net_box]="#8fbfd0"
+theme[proc_box]="#a7beda"
+
+# Box divider line and small boxes line color
+theme[div_line]="#223855"
+
+# Temperature graph colors (Earth blue -> sunlight -> red)
+theme[temp_start]="#7ea3cf"
+theme[temp_mid]="#e0c48a"
+theme[temp_end]="#d9777a"
+
+# CPU graph colors (Earth night side -> oceans -> cloud tops)
+theme[cpu_start]="#223855"
+theme[cpu_mid]="#7ea3cf"
+theme[cpu_end]="#e8f0f8"
+
+# Mem/Disk free meter (regolith from shadow to sunlit)
+theme[free_start]="#757478"
+theme[free_mid]="#8f8c8d"
+theme[free_end]="#b9b6b5"
+
+# Mem/Disk cached meter
+theme[cached_start]="#223855"
+theme[cached_mid]="#7ea3cf"
+theme[cached_end]="#a7beda"
+
+# Mem/Disk available meter
+theme[available_start]="#9ab59a"
+theme[available_mid]="#c0d3bf"
+theme[available_end]="#e8f0f8"
+
+# Mem/Disk used meter (Earth blue warming toward red as it fills)
+theme[used_start]="#7ea3cf"
+theme[used_mid]="#e0c48a"
+theme[used_end]="#d9777a"
+
+# Download graph colors (Earth's atmosphere)
+theme[download_start]="#223855"
+theme[download_mid]="#8fbfd0"
+theme[download_end]="#c4dceb"
+
+# Upload graph colors (sunlight)
+theme[upload_start]="#6e6158"
+theme[upload_mid]="#d69a6e"
+theme[upload_end]="#e0c48a"
+
+# Process box color gradient for threads, mem and cpu usage
+theme[process_start]="#7ea3cf"
+theme[process_mid]="#a7beda"
+theme[process_end]="#e8f0f8"
+
+# Graph gradient colors (deep space -> regolith -> cloud tops)
+theme[gradient_color_0]="#0a111d"
+theme[gradient_color_1]="#152033"
+theme[gradient_color_2]="#223855"
+theme[gradient_color_3]="#757478"
+theme[gradient_color_4]="#8f8c8d"
+theme[gradient_color_5]="#b9b6b5"
+theme[gradient_color_6]="#d3d1cf"
+theme[gradient_color_7]="#e8f0f8"
