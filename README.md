@@ -22,6 +22,22 @@ Every core color was sampled from the photos in `backgrounds/`.
 The remaining ANSI colors are desaturated so they sit quietly against the
 monochrome lunar surface.
 
+## What it themes
+
+- **Omarchy shell** (`shell.toml`): bar, menus, launcher, notifications,
+  polkit prompt, lock screen and image picker, with Earth-blue focus and
+  selection.
+- **Windows** (`hyprland.lua`): borders fade from Earth blue to lunar
+  highlight, and the focused window carries a soft blue glow, like
+  earthshine on the Moon's night side.
+- **btop** (`btop.theme`): CPU graphs rise from Earth's night side to its
+  cloud tops, memory meters use regolith greys, and temperature and usage
+  warm from Earth blue through sunlight to red.
+- **Everything else** Omarchy themes (terminals, Neovim, VS Code, Chromium
+  browsers, Helix, Obsidian, keyboard RGB) is generated from `colors.toml`.
+
+Requires Omarchy 4; see [COMPATIBILITY.md](COMPATIBILITY.md).
+
 ## Install
 
 ```bash
@@ -67,3 +83,19 @@ The wordmark wallpapers and `unlock.png` are generated from SVG by
 `omarchy plymouth preview '#0a111d' '#d3d1cf' unlock.png preview-unlock.png`.
 `art/omarchy-logo.svg` is the Omarchy logo as shipped in
 `/usr/share/omarchy/logo.svg`.
+
+## Validation
+
+`tests/validate-theme.sh` checks the palette and shell tokens, that
+`hyprland.lua` and `shell.toml` repeat the border colors from `colors.toml`,
+the image sizes, and that the generated art matches `art/generate.py`. CI runs
+it on every push.
+
+```bash
+bash tests/validate-theme.sh
+```
+
+## License
+
+MIT, see [LICENSE](LICENSE). The NASA photographs and the Omarchy wordmark are
+not covered by it.
