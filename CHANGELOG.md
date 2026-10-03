@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.1.0 (2026-10-03)
+
+### Feat
+
+- round window and shell corners
+
 ## v1.0.0 (2026-10-03)
 
 First release.
