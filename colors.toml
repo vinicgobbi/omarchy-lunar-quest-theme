@@ -1,0 +1,41 @@
+mode = "dark"
+
+# Earth's oceans seen from lunar orbit.
+accent = "#7ea3cf"
+# The night side of Earth, just past the terminator.
+selection = "#223855"
+# Regolith in shadow.
+muted = "#757478"
+
+# Deep space over the lunar limb.
+background = "#0a111d"
+dark_background = "#070c15"
+darker_background = "#04070e"
+lighter_background = "#152033"
+
+# Sunlit regolith, from crater floors to bright rims.
+foreground = "#d3d1cf"
+dark_foreground = "#8f8c8d"
+light_foreground = "#b9b6b5"
+# Earth's cloud tops.
+bright_foreground = "#e8f0f8"
+
+red = "#d9777a"
+yellow = "#e0c48a"
+orange = "#d69a6e"
+green = "#9ab59a"
+cyan = "#8fbfd0"
+blue = "#7ea3cf"
+magenta = "#ad99c9"
+brown = "#6e6158"
+
+bright_red = "#eaa0a2"
+bright_yellow = "#eedcb0"
+bright_green = "#c0d3bf"
+bright_cyan = "#c4dceb"
+bright_blue = "#a7beda"
+bright_magenta = "#cfc1e0"
+
+# Earthrise over the limb: ocean blue fading into lunar highlight.
+hyprland_active_border = "rgba(7ea3cfee) rgba(c3c0c0ee) 45deg"
+hyprland_inactive_border = "rgba(223855aa)"
