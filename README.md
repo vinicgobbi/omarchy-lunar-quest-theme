@@ -47,6 +47,46 @@ omarchy theme install https://github.com/vinicgobbi/omarchy-lunar-quest-theme
 omarchy theme set "Lunar Quest"
 ```
 
+### Restoring the window glow and rounded corners
+
+For safety, Omarchy ignores any `*.lua` file in a theme installed from a git
+repository, because Hyprland runs it as code. It tells you so on install:
+
+```
+Ignored in ~/.config/omarchy/themes/lunar-quest: hyprland.lua
+```
+
+Omarchy generates a plain `hyprland.lua` instead, so the border gradient
+still works, but the earthshine glow and the rounded corners are lost. Read
+[hyprland.lua](hyprland.lua) first, then pick one way to bring it back.
+
+**Option 1: theme hook (recommended).** The hook copies the theme's
+`hyprland.lua` into place each time Lunar Quest is applied and reloads
+Hyprland. Other themes are untouched, and `omarchy theme update` keeps
+working.
+
+```bash
+omarchy hook install theme-set \
+  ~/.config/omarchy/themes/lunar-quest/hooks/theme-set.d/50-lunar-quest-hyprland
+omarchy theme set "Lunar Quest"
+```
+
+To undo it, remove
+`~/.config/omarchy/hooks/theme-set.d/50-lunar-quest-hyprland`.
+
+**Option 2: make it your own theme.** Without its `.git` folder, Omarchy
+treats the theme as one you wrote and loads every file. You lose
+`omarchy theme update`; reinstall to get new versions.
+
+```bash
+rm -rf ~/.config/omarchy/themes/lunar-quest/.git
+omarchy theme set "Lunar Quest"
+```
+
+**Option 3: for every theme.** Add the `decoration` block from
+[hyprland.lua](hyprland.lua) to `~/.config/hypr/looknfeel.lua`. The glow and
+corners then apply whatever theme is active.
+
 ## Backgrounds
 
 0. `0-omarchy-lunar-quest.png` (default): the Omarchy wordmark over
