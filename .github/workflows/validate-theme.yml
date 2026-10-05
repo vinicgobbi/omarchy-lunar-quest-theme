@@ -22,7 +22,7 @@ jobs:
           sudo apt-get install --no-install-recommends --yes imagemagick librsvg2-bin shellcheck python3
 
       - name: Run ShellCheck
-        run: shellcheck tests/validate-theme.sh
+        run: shellcheck tests/validate-theme.sh hooks/theme-set.d/50-lunar-quest-hyprland
 
       - name: Validate theme package
         run: bash tests/validate-theme.sh
