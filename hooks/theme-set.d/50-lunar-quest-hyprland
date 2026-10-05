@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Omarchy theme-set hook: restore Lunar Quest's hyprland.lua.
+#
+# Omarchy drops every *.lua from a theme installed with `omarchy theme install`,
+# because Hyprland runs it as code, and generates a plain hyprland.lua in its
+# place. That keeps the border colors but loses the earthshine glow and the
+# rounded corners. This hook puts the theme's own hyprland.lua back each time
+# Lunar Quest is applied, then reloads Hyprland. Other themes are untouched.
+#
+# Installing it is the explicit opt-in to run that file:
+#   omarchy hook install theme-set \
+#     ~/.config/omarchy/themes/lunar-quest/hooks/theme-set.d/50-lunar-quest-hyprland
+
+set -euo pipefail
+
+theme=${1:-}
+theme_dir="$HOME/.config/omarchy/themes/$theme"
+source="$theme_dir/hyprland.lua"
+dest="$HOME/.local/state/omarchy/current/theme/hyprland.lua"
+
+# The theme folder is named after the repository it was cloned from, so
+# recognize Lunar Quest by this hook shipping inside it, not by its name.
+[[ $theme =~ ^[a-z0-9_][a-z0-9._+-]*$ ]] || exit 0
+[[ -f $theme_dir/hooks/theme-set.d/50-lunar-quest-hyprland ]] || exit 0
+
+[[ -f $source && ! -L $source ]] || exit 0
+cmp -s "$source" "$dest" && exit 0
+
+install -m 0644 -T "$source" "$dest"
+hyprctl reload >/dev/null
