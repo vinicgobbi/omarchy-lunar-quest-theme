@@ -43,7 +43,7 @@ Requires Omarchy 4; see [COMPATIBILITY.md](COMPATIBILITY.md).
 ## Install
 
 ```bash
-omarchy theme install https://github.com/vinicgobbi/omarchy-theme-lunar-quest
+omarchy theme install https://github.com/vinicgobbi/omarchy-lunar-quest-theme
 omarchy theme set "Lunar Quest"
 ```
 
