@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.2.0 (2026-10-05)
+
+### Feat
+
+- add hook to restore hyprland.lua on installed themes
+
 ## v1.1.0 (2026-10-03)
 
 ### Feat
